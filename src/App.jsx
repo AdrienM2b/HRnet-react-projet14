@@ -1,4 +1,3 @@
-import './App.css';
 import EmployeeList from './views/EmployeeList';
 import Home from './views/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

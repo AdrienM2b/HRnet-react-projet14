@@ -116,7 +116,9 @@ export default function FormEmployee() {
           // value={employee.departement}
           onChange={handleChange}
         />
-        <button type='submit'>Save</button>
+        <button type='submit' className='save_button'>
+          Save
+        </button>
       </form>
       {isModalOpen && (
         <Modal
