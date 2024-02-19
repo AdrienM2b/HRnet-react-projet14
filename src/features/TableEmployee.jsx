@@ -4,21 +4,9 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const columns = [
-  {
-    name: 'First Name',
-    selector: (row) => row.firstname,
-    sortable: true,
-  },
-  {
-    name: 'Last Name',
-    selector: (row) => row.lastname,
-    sortable: true,
-  },
-  {
-    name: 'Birthday',
-    selector: (row) => row.birth,
-    sortable: true,
-  },
+  { name: 'First Name', selector: (row) => row.firstname, sortable: true },
+  { name: 'Last Name', selector: (row) => row.lastname, sortable: true },
+  { name: 'Birthday', selector: (row) => row.birth, sortable: true },
   { name: 'Start Date', selector: (row) => row.startDate, sortable: true },
   { name: 'Street', selector: (row) => row.street, sortable: true },
   { name: 'City', selector: (row) => row.city, sortable: true },

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
 export default function List({ label, infos, data, onChange }) {
-  // console.log(data[0]);
-  // console.log(data.name);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(data[0].name);
 
@@ -16,7 +14,6 @@ export default function List({ label, infos, data, onChange }) {
     setIsOpen(false);
     onChange({ target: { name: infos, value: option } });
   };
-  console.log('selectedOption', selectedOption);
   return (
     <>
       <h2>{label}</h2>
