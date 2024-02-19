@@ -19,11 +19,13 @@ export default function TableEmployee() {
   const [searchTerm, setSearchTerm] = useState('');
   const employees = useSelector((state) => state.employee);
 
-  const filteredEmployees = employees.filter((employee) =>
-    Object.values(employee).some((value) =>
-      value.toString().toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  );
+  const filteredEmployees = [...employees]
+    .reverse()
+    .filter((employee) =>
+      Object.values(employee).some((value) =>
+        value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    );
 
   const data = filteredEmployees.length ? filteredEmployees : [{}];
 
